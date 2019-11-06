@@ -23,7 +23,7 @@ class App extends Component {
               exact path="/"
               render={() => <Home />} />
             <Route
-              exact path="/schedule/"
+              exact path="/schedule"
               render={() => <Schedule />} />
             <Route
               exact path="/register"

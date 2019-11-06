@@ -42,7 +42,7 @@ class NavBar extends Component {
     })
   }
 
-  setRedirectRegster = () => {
+  setRedirectRegister = () => {
     this.setState({
       redirect: 1
     })
@@ -54,6 +54,12 @@ class NavBar extends Component {
     })
   }
 
+  setRedirectWechat = () => {
+    this.setState({
+      redirect: 15
+    })
+  }
+
   renderRedirect = () => {
     if (this.state.redirect == 2) {
       return <Redirect to='/schedule' />
@@ -61,6 +67,8 @@ class NavBar extends Component {
       return <Redirect to='/register' />
     }else if(this.state.redirect ==3){
       return <Redirect to='/file' />
+    }else if(this.state.redirect ==15){
+      window.location.href="https://mp.weixin.qq.com/s/_D6d1atBM0vOrlssY-dQ6w";
     }else{
 
     }
@@ -79,7 +87,7 @@ class NavBar extends Component {
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
               <li className="summit-white"><a href="/">Home</a></li>
-                <li className="summit-white"><a href="news">About 2019 Summit</a></li>
+                <li className="summit-white"><a href="https://mp.weixin.qq.com/s/_D6d1atBM0vOrlssY-dQ6w">About 2019 Summit</a></li>
                 <li><a href="faqs">FAQs</a></li>
                 <li className="dropdown">
                   <a href="more" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span className="caret"></span></a>
@@ -108,7 +116,7 @@ class NavBar extends Component {
               </ul>
               <ul className="nav navbar-nav navbar-right navbar-ul">
                 <li className="navbar-text"><a onClick={this.setRedirectSchedule}>SCHEDULE</a></li>
-                <li className="navbar-text"><a href="register">REGISTER</a></li>
+                <li className="navbar-text"><a onClick={this.setRedirectRegister}>REGISTER</a></li>
                 <li className="navbar-text"><a href="news">NEWS</a></li>
                 <li className="navbar-text"><a href="docs">DOCUMENTS & MATERIALS</a></li>
                 <li className="navbar-text"><a href="media">MEDIA INFOMATION</a></li>

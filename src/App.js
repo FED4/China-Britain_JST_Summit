@@ -9,6 +9,7 @@ import Home from "./view/home/HomeZh"
 import Schedule from "./view/schedule/Schedule"
 import NotFound from "./view/notfound/NotFound"
 import Register from "./view/register/Register"
+import Wechat from "./view/wechat/wechat"
 
 /* eslint-disable */
 
@@ -28,6 +29,9 @@ class App extends Component {
             <Route
               exact path="/register"
               render={() => <Register />} />
+            <Route
+              exact path="/wechat"
+              render={() => <Wechat />} />
             <Route
               render={() => <NotFound />} />
           </Switch>

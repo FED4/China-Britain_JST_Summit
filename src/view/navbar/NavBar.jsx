@@ -20,6 +20,7 @@ class NavBar extends Component {
     super(props)
     this.state = {
       menu_class: '',
+      redirect:0,
     }
   }
 
@@ -35,11 +36,42 @@ class NavBar extends Component {
     }
   }
 
+  setRedirectSchedule = () => {
+    this.setState({
+      redirect: 2
+    })
+  }
+
+  setRedirectRegster = () => {
+    this.setState({
+      redirect: 1
+    })
+  }
+
+  setRedirectFile = () => {
+    this.setState({
+      redirect: 3
+    })
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect == 2) {
+      return <Redirect to='/schedule' />
+    }else if(this.state.redirect ==1){
+      return <Redirect to='/register' />
+    }else if(this.state.redirect ==3){
+      return <Redirect to='/file' />
+    }else{
+
+    }
+  }
+
   render() {
     let top_menu_class = `top-menu ${this.state.menu_class}`
     return (
 
       <div>
+          {this.renderRedirect()}
         <BrowserView>
           <nav className="navbar navbar-inverse">
             <div className="container-fluid summit-blue">
@@ -75,7 +107,7 @@ class NavBar extends Component {
                 </a>
               </ul>
               <ul className="nav navbar-nav navbar-right navbar-ul">
-                <li className="navbar-text"><a href="schedule">SCHEDULE</a></li>
+                <li className="navbar-text"><a onClick={this.setRedirectSchedule}>SCHEDULE</a></li>
                 <li className="navbar-text"><a href="register">REGISTER</a></li>
                 <li className="navbar-text"><a href="news">NEWS</a></li>
                 <li className="navbar-text"><a href="docs">DOCUMENTS & MATERIALS</a></li>

@@ -1,0 +1,38 @@
+.page-footer{
+  background-color: #190C5C;
+  color:white;
+  bottom: 0;
+  width:100%;
+}
+
+  .calendar-icon{
+    position: relative;
+    bottom: auto;
+    left:45%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .edit-icon{
+    position: relative;
+    bottom: auto;
+    left:3%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .file-icon{
+    position: absolute;
+    bottom: auto;
+    right: 4.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-footer{
+    background-color: #190C5C;
+    color:white;
+    position:fixed;
+    bottom: 0;
+    width:100%;
+  }

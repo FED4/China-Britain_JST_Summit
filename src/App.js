@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "./view/navbar/NavBar";
+import Footer from "./view/footer/Footer";
 import {Route, Switch} from "react-router-dom";
 
-import Home from "./HomeZh"
-import Schedule from "./Schedule"
-import NotFound from "./NotFound"
+import Home from "./view/home/HomeZh"
+import Schedule from "./view/schedule/Schedule"
+import NotFound from "./view/notfound/NotFound"
+import Register from "./view/register/Register"
 
 /* eslint-disable */
 
@@ -24,6 +25,9 @@ class App extends Component {
             <Route
               exact path="/schedule"
               render={() => <Schedule />} />
+            <Route
+              exact path="/register"
+              render={() => <Register />} />
             <Route
               render={() => <NotFound />} />
           </Switch>

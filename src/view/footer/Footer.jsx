@@ -14,16 +14,36 @@ import {
 class NavBar extends Component {
 
   state = {
-  redirect: false
+    redirect: 0
   }
-  setRedirect = () => {
+
+  setRedirectSchedule = () => {
     this.setState({
-      redirect: true
+      redirect: 2
     })
   }
+
+  setRedirectRegster = () => {
+    this.setState({
+      redirect: 1
+    })
+  }
+
+  setRedirectFile = () => {
+    this.setState({
+      redirect: 3
+    })
+  }
+
   renderRedirect = () => {
-    if (this.state.redirect) {
+    if (this.state.redirect == 2) {
       return <Redirect to='/schedule' />
+    }else if(this.state.redirect ==1){
+      return <Redirect to='/register' />
+    }else if(this.state.redirect ==3){
+      return <Redirect to='/file' />
+    }else{
+      
     }
   }
 
@@ -86,9 +106,9 @@ class NavBar extends Component {
         </BrowserView>
         <MobileView>
           <footer class="mobile-footer font-small blue pt-4">
-              <FontAwesomeIcon icon={faCalendarAlt} className='calendar-icon fa-3x' onClick={this.setRedirect}/>
-              <FontAwesomeIcon icon={faEdit} className='edit-icon fa-3x' onClick={this.setToggleTopMenuClass}/>
-              <FontAwesomeIcon icon={faFileAlt} className='file-icon fa-3x' onClick={this.setToggleTopMenuClass}/>
+              <FontAwesomeIcon icon={faCalendarAlt} className='calendar-icon fa-3x' onClick={this.setRedirectSchedule}/>
+              <FontAwesomeIcon icon={faEdit} className='edit-icon fa-3x' onClick={this.setRedirectRegster}/>
+              <FontAwesomeIcon icon={faFileAlt} className='file-icon fa-3x' onClick={this.setRedirectFile}/>
           </footer>
         </MobileView>
       </div>

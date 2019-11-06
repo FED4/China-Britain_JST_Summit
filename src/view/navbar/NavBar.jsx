@@ -79,7 +79,8 @@ class NavBar extends Component {
                 </a>
               </ul>
               <ul className="nav navbar-nav navbar-right navbar-ul">
-              <li className="navbar-text"><a href="schedule">SCHEDULE</a></li>
+                <li className="navbar-text"><a href="schedule">SCHEDULE</a></li>
+                <li className="navbar-text"><a href="register">REGISTER</a></li>
                 <li className="navbar-text"><a href="news">NEWS</a></li>
                 <li className="navbar-text"><a href="docs">DOCUMENTS & MATERIALS</a></li>
                 <li className="navbar-text"><a href="media">MEDIA INFOMATION</a></li>

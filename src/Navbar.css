@@ -1,0 +1,160 @@
+.summit-blue{
+  background-color: #190C5C;
+  border-color: #190C5C;
+}
+
+.summit-white{
+  color: #FFFFFF;
+
+}
+
+.white-background{
+  background-color: #FFFFFF;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white; /*Change active text color here*/
+}
+
+.navbar-inverse .navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar-inverse {
+    min-height:32px !important;
+    position: relative;
+    margin-bottom: 0;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+    color: #190C5C; /*Change active text color here*/
+}
+
+.navbar-default {
+  padding-top: 0px;
+  padding-bottom: 0;
+ min-height: 55px !important;
+  height: 72px !important;
+  color: #190C5C;
+
+}
+
+.navbar-default a{
+  border-bottom: 3px solid #FFFFFF;
+}
+
+.navbar-default a:hover {
+  border-bottom: 3px solid #190C5C;
+}
+
+.navbar-default a:active {
+  border-bottom: 3px solid #190C5C;
+}
+
+.navbar-logo {
+  height: 68px !important;
+  padding-bottom: 4px;
+}
+.logo-container {
+  position:relative;
+  padding-top: 0px;
+  margin-top:0px;
+}
+
+
+
+
+
+
+
+
+
+.top-menu {
+    background-color: #190C5C;
+    padding: 20px 50px 20px 50px;
+    user-select: none;
+}
+
+.top-menu > .right {
+    float: right;
+    color: inheritwhite;
+}
+
+.top-menu > .right > * {
+    margin-left: 5px;
+}
+
+.top-menu > .left {
+    float: left;
+}
+
+.top-menu > .left > * {
+    margin-right: 5px;
+}
+
+.top-menu > .left > *, .top-menu > .right > * {
+    padding: 11.4px;
+    display: inline-block;
+    text-align: center;
+    min-width: 50px;
+    color:white;
+}
+
+.top-menu *:hover{
+    cursor: pointer;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.top-menu .top-menu-icon {
+    padding: 5px;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.4rem;
+    display: none;
+    color: white;
+}
+
+.jumpToHome{
+  position: absolute;
+  top: 1.5rem;
+  left:0.2rem;
+  font-size: 150%;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .top-menu {
+        padding: 40px 20px 20px 20px;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .top-menu > .left, .top-menu > .right {
+        display: none;
+    }
+
+    .top-menu-icon {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .top-menu.toggled {
+        padding: 60px 0 0 0;
+        max-height: 1500px;
+        transition: max-height 1s;
+    }
+
+    .top-menu.toggled > .left {
+        border-bottom: 1px solid black;
+        margin: 15px 0 0 0 ;
+    }
+
+    .top-menu.toggled *:not(.top-menu-lead):not(.top-menu-icon) {
+        float: none;
+        display: block !important;
+        text-align: left;
+        margin: 0;
+    }
+}

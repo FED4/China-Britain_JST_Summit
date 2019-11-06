@@ -1,44 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 //import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import NavBar from "./view/navbar/NavBar";
 import Footer from "./view/footer/Footer";
-import {Route, Switch} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
-import Home from "./view/home/HomeZh"
-import Schedule from "./view/schedule/Schedule"
-import NotFound from "./view/notfound/NotFound"
-import Register from "./view/register/Register"
+import Home from "./view/home/HomeZh";
+import Schedule from "./view/schedule/Schedule";
+import NotFound from "./view/notfound/NotFound";
+import Register from "./view/register/Register";
+import News from "./view/news/News";
 
 /* eslint-disable */
 
 class App extends Component {
   render() {
-
     return (
       <div className="App1">
         <NavBar />
-          <Switch>
-            <Route
-              exact path="/"
-              render={() => <Home />} />
-            <Route
-              exact path="/schedule"
-              render={() => <Schedule />} />
-            <Route
-              exact path="/register"
-              render={() => <Register />} />
-            <Route
-              render={() => <NotFound />} />
-          </Switch>
-        <Footer/>
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/schedule" render={() => <Schedule />} />
+          <Route exact path="/register" render={() => <Register />} />
+          <Route exact path="/news" render={() => <News />} />
+          <Route render={() => <NotFound />} />
+        </Switch>
+        <Footer />
       </div>
     );
   }
 }
 
 export default App;
-
 
 /*  return (
     <div className="App">

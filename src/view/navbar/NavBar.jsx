@@ -35,10 +35,6 @@ class NavBar extends Component {
     }
   }
 
-  jumpToHome = () => {
-    return (<Redirect to="/" />);
-  }
-
   render() {
     let top_menu_class = `top-menu ${this.state.menu_class}`
     return (

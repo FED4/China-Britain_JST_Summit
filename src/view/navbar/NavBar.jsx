@@ -67,7 +67,7 @@ class NavBar extends Component {
     };
 
     setRedirectPhdNatSciAgenda = () => {
-      console.log("hit1");
+        console.log("hit1");
         this.setState({
             redirect: 11
         })
@@ -76,6 +76,12 @@ class NavBar extends Component {
     setRedirectPhdMedAgenda = () => {
         this.setState({
             redirect: 12
+        })
+    };
+
+    setRedirectImperialPitchAgenda = () => {
+        this.setState({
+            redirect: 13
         })
     };
 
@@ -93,7 +99,7 @@ class NavBar extends Component {
         } else if (this.state.redirect === 12) {
             return <Redirect to='/phd_med_agenda'/>;
         } else if (this.state.redirect === 13) {
-            return <Redirect to='/imperial_pitch'/>;
+            return <Redirect to='/imperial_pitch_agenda'/>;
         } else if (this.state.redirect === 15) {
             window.location.href = "https://mp.weixin.qq.com/s/_D6d1atBM0vOrlssY-dQ6w";
         } else {
@@ -179,7 +185,9 @@ class NavBar extends Component {
                                 </a>
                             </div>
                             <div className='right'>
-                                <Item text='Imperial Pitch Competition'/>
+                                <a onClick={this.setRedirectImperialPitchAgenda}>
+                                    <Item text='Imperial Pitch Competition'/>
+                                </a>
                             </div>
 
                             <div className='clear-fix'/>

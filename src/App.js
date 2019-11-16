@@ -16,6 +16,7 @@ import Guests from "./view/guests/guests";
 import PhDEngAgenda from "./view/agenda/phdEngAgenda";
 import PhDNatSciAgenda from "./view/agenda/phdNatSciAgenda";
 import PhDMedAgenda from "./view/agenda/phdMedAgenda";
+import ImperialPitchAgenda from "./view/agenda/imperialPitchAgenda";
 
 
 /* eslint-disable */
@@ -52,6 +53,9 @@ class App extends Component {
                     <Route
                         exact path="/phd_med_agenda"
                         render={() => <PhDMedAgenda />}/>
+                    <Route
+                        exact path="/imperial_pitch_agenda"
+                        render={() => <ImperialPitchAgenda />}/>
                     <Route
                         render={() => <NotFound/>}/>
                 </Switch>

@@ -12,6 +12,12 @@ import Register from "./view/register/Register"
 import Wechat from "./view/wechat/wechat"
 import Guests from "./view/guests/guests";
 
+// agenda
+import PhDEngAgenda from "./view/agenda/phdEngAgenda";
+import PhDNatSciAgenda from "./view/agenda/phdNatSciAgenda";
+import PhDMedAgenda from "./view/agenda/phdMedAgenda";
+
+
 /* eslint-disable */
 
 class App extends Component {
@@ -36,6 +42,16 @@ class App extends Component {
                     <Route
                         exact path="/guests"
                         render={() => <Guests/>}/>
+                    {/* Agenda */}
+                    <Route
+                        exact path="/phd_eng_agenda"
+                        render={() => <PhDEngAgenda />}/>
+                    <Route
+                        exact path="/phd_natsci_agenda"
+                        render={() => <PhDNatSciAgenda />}/>
+                    <Route
+                        exact path="/phd_med_agenda"
+                        render={() => <PhDMedAgenda />}/>
                     <Route
                         render={() => <NotFound/>}/>
                 </Switch>

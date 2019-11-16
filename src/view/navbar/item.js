@@ -5,11 +5,7 @@ class Item extends Component {
 
     constructor(props) {
         super(props);
-        this.text = props.text
-    }
-
-    directTo() {
-
+        this.text = props.text;
     }
 
     render() {

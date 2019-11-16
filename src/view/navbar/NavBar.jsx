@@ -17,7 +17,7 @@ import {
 class NavBar extends Component {
 
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             menu_class: '',
             redirect: 0,
@@ -34,45 +34,72 @@ class NavBar extends Component {
                 menu_class: '',
             })
         }
-    }
+    };
 
     setRedirectSchedule = () => {
         this.setState({
             redirect: 2
         })
-    }
+    };
 
     setRedirectRegister = () => {
         this.setState({
             redirect: 1
         })
-    }
+    };
 
     setRedirectFile = () => {
         this.setState({
             redirect: 3
         })
-    }
+    };
 
     setRedirectWechat = () => {
         this.setState({
             redirect: 15
         })
-    }
+    };
+
+    setRedirectPhdEngAgenda = () => {
+        this.setState({
+            redirect: 10
+        })
+    };
+
+    setRedirectPhdNatSciAgenda = () => {
+      console.log("hit1");
+        this.setState({
+            redirect: 11
+        })
+    };
+
+    setRedirectPhdMedAgenda = () => {
+        this.setState({
+            redirect: 12
+        })
+    };
 
     renderRedirect = () => {
-        if (this.state.redirect == 2) {
-            return <Redirect to='/schedule'/>
-        } else if (this.state.redirect == 1) {
-            return <Redirect to='/register'/>
-        } else if (this.state.redirect == 3) {
-            return <Redirect to='/file'/>
-        } else if (this.state.redirect == 15) {
+        if (this.state.redirect === 2) {
+            return <Redirect to='/schedule'/>;
+        } else if (this.state.redirect === 1) {
+            return <Redirect to='/register'/>;
+        } else if (this.state.redirect === 3) {
+            return <Redirect to='/file'/>;
+        } else if (this.state.redirect === 10) {
+            return <Redirect to='/phd_eng_agenda'/>;
+        } else if (this.state.redirect === 11) {
+            return <Redirect to='/phd_natsci_agenda'/>;
+        } else if (this.state.redirect === 12) {
+            return <Redirect to='/phd_med_agenda'/>;
+        } else if (this.state.redirect === 13) {
+            return <Redirect to='/imperial_pitch'/>;
+        } else if (this.state.redirect === 15) {
             window.location.href = "https://mp.weixin.qq.com/s/_D6d1atBM0vOrlssY-dQ6w";
         } else {
 
         }
-    }
+    };
 
     render() {
         let top_menu_class = `top-menu ${this.state.menu_class}`
@@ -135,15 +162,23 @@ class NavBar extends Component {
                     <div>
                         <div className={top_menu_class}>
                             <a className="jumpToHome" href="/">〈 Home</a>
-                            <FontAwesomeIcon icon={faBars} className='top-menu-icon fa-3x'
-                                             onClick={this.setToggleTopMenuClass}/>
+                            <FontAwesomeIcon
+                                icon={faBars}
+                                className='top-menu-icon fa-3x'
+                                onClick={this.setToggleTopMenuClass}/>
 
                             <div className='left'>
-                                <Item text='PhD Forum Engineering Agenda'/>
-                                <Item text='PhD Forum Natural Science Agenda'/>
+                                <a onClick={this.setRedirectPhdEngAgenda}>
+                                    <Item text='PhD Forum Engineering Agenda'/>
+                                </a>
+                                <a onClick={this.setRedirectPhdNatSciAgenda}>
+                                    <Item text='PhD Forum Natural Science Agenda'/>
+                                </a>
+                                <a onClick={this.setRedirectPhdMedAgenda}>
+                                    <Item text='PhD Forum Medicine Agenda'/>
+                                </a>
                             </div>
                             <div className='right'>
-                                <Item text='PhD Forum Medicine Agenda'/>
                                 <Item text='Imperial Pitch Competition'/>
                             </div>
 

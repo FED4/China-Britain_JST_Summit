@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./home.css";
 //import logo from './logo.svg';
@@ -15,7 +15,7 @@ class App extends Component {
             <div className="App">
                 <div className="img-">
                     <a className="img-" href="/">
-                        <img className="img" src="https://www.yuxiuk.com/images/activities/uk-china-summit-2017.jpg"/>
+                        <img className="img" src="https://i.imgur.com/oJGcq5e.jpg"/>
                     </a>
                 </div>
 
@@ -34,13 +34,19 @@ class App extends Component {
 
                 <div className="card-container">
                     <div className="card">
-                        jalkdsjf;akf;jsakf;ldsadd
+                        <a className="img-" href="/">
+                            <img className="img" src="https://imgur.com/9EhRAAS.png"/>
+                        </a>
                     </div>
                     <div className="card">
-                        jalkdsjf;akf;jsakf;ldsadd
+                        <a className="img-" href="/">
+                            <img className="img" src="https://imgur.com/pnXf6CG.png"/>
+                        </a>
                     </div>
                     <div className="card">
-                        jalkdsjf;akf;jsakf;ldsadd
+                        <a className="img-" href="/">
+                            <img className="img" src="https://imgur.com/zrvSS7k.png"/>
+                        </a>
                     </div>
                 </div>
 

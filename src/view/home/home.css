@@ -1,4 +1,17 @@
-.img{
-  max-width: 100%;
-   height: auto;
+.img {
+    max-width : 100%;
+    height    : auto;
+}
+
+.img-big {
+
+}
+
+.card {
+    margin: 5px;
+    background: white;
+}
+
+.card-container {
+    padding: 10px;
 }

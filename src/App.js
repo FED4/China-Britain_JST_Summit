@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import NavBar from "./view/navbar/NavBar";
@@ -10,35 +10,39 @@ import Schedule from "./view/schedule/Schedule"
 import NotFound from "./view/notfound/NotFound"
 import Register from "./view/register/Register"
 import Wechat from "./view/wechat/wechat"
+import Guests from "./view/guests/guests";
 
 /* eslint-disable */
 
 class App extends Component {
-  render() {
+    render() {
 
-    return (
-      <div className="App1">
-        <NavBar />
-          <Switch>
-            <Route
-              exact path="/"
-              render={() => <Home />} />
-            <Route
-              exact path="/schedule"
-              render={() => <Schedule />} />
-            <Route
-              exact path="/register"
-              render={() => <Register />} />
-            <Route
-              exact path="/wechat"
-              render={() => <Wechat />} />
-            <Route
-              render={() => <NotFound />} />
-          </Switch>
-        <Footer/>
-      </div>
-    );
-  }
+        return (
+            <div className="App1">
+                <NavBar/>
+                <Switch>
+                    <Route
+                        exact path="/"
+                        render={() => <Home/>}/>
+                    <Route
+                        exact path="/schedule"
+                        render={() => <Schedule/>}/>
+                    <Route
+                        exact path="/register"
+                        render={() => <Register/>}/>
+                    <Route
+                        exact path="/wechat"
+                        render={() => <Wechat/>}/>
+                    <Route
+                        exact path="/guests"
+                        render={() => <Guests/>}/>
+                    <Route
+                        render={() => <NotFound/>}/>
+                </Switch>
+                <Footer/>
+            </div>
+        );
+    }
 }
 
 export default App;

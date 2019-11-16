@@ -14,7 +14,7 @@ class App extends Component {
         return (
             <div className="App">
                 <div className="img-">
-                    <a className="img-" href="/">
+                    <a className="img-" href="https://mp.weixin.qq.com/s/7twNRlDCRyC7jRwm8v4hZA">
                         <img className="img" src="https://i.imgur.com/oJGcq5e.jpg"/>
                     </a>
                 </div>
@@ -34,24 +34,23 @@ class App extends Component {
 
                 <div className="card-container">
                     <div className="card">
-                        <a className="img-" href="/">
+                        <a className="img-" href="https://mp.weixin.qq.com/s/QdAF6p-kMBbXRLhf_drbjw">
                             <img className="img" src="https://imgur.com/9EhRAAS.png"/>
                         </a>
                     </div>
                     <div className="card">
-                        <a className="img-" href="/">
+                        <a className="img-" href="https://mp.weixin.qq.com/s/LAamxbafWC-QHWH_Wy57cA">
                             <img className="img" src="https://imgur.com/pnXf6CG.png"/>
                         </a>
                     </div>
                     <div className="card">
-                        <a className="img-" href="/">
+                        <a className="img-" href="https://mp.weixin.qq.com/s/wFpkqj_JarRR37uA1GaQug">
                             <img className="img" src="https://imgur.com/zrvSS7k.png"/>
                         </a>
                     </div>
                 </div>
-
-
             </div>
+
         );
     }
 }

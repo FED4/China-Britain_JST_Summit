@@ -10,6 +10,8 @@
 .card {
     margin: 5px;
     background: white;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 .card-container {
